@@ -12,6 +12,6 @@ int button_pressed_p (void)
 /** Initialise button1.  */
 void button_init (void)
 {
-    PORTD &= (1 << 2);  // 0 for output
+    PORTD &= !(1 << 7);  // 0 for output
 }
 

@@ -19,5 +19,5 @@ void led_off (void)
 /** Initialise LED1.  */
 void led_init (void)
 {
-    pio_config_set(LED_PIO, PIO_OUTPUT_LOW);   // low for output 
+    pio_config_set(LED_PIO, PIO_OUTPUT_LOW);
 }

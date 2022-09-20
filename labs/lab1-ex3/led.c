@@ -12,7 +12,7 @@ void led_on (void)
 /** Turn LED1 off.  */
 void led_off (void)
 {
-    DDRC &= ( 1 << 2);  // 0 for off
+    DDRC &= !(1 << 2);  // 0 for off
 }
 
 

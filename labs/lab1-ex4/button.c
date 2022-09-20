@@ -16,4 +16,3 @@ void button_init (void)
     // see pio.h: line 91: options for pio_config_set
     pio_config_set(BTN_PIO, PIO_INPUT);    
 }
-
