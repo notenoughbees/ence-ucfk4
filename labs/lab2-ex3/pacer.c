@@ -17,7 +17,7 @@ void pacer_init (uint16_t pacer_frequency)
         //  so to get period, must convert seconds to ticks
         //uint16_t ticks = milliseconds * (CPU_FREQ / TIMER1_PRESCALE) / 1000;
         uint16_t ticks = 1 * (CPU_FREQ / TIMER1_PRESCALE);  // 1: delay in seconds
-        pacer_period = ticks / pacer_frequency;  // period = reciprocal of frequency
+        pacer_period = ticks / pacer_frequency;  // period = reciprocal of frequency: http://www.differencebetween.net/science/mathematics-statistics/difference-between-period-and-frequency/
 
 }
 
