@@ -1,6 +1,9 @@
 #ifndef TIMER_H
 #define TIMER_H
 
+#define CPU_FREQ 8000000
+#define TIMER1_PRESCALE 1024
+
 #include "system.h"
 
 /* Initialise timer.  */
