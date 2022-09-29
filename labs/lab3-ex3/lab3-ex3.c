@@ -30,12 +30,23 @@ int main (void)
     navswitch_init ();
 
     /* TODO: Initialise IR driver.  */
-
+    ir_uart_init();
 
     pacer_init (PACER_RATE);
 
     while (1)
     {
+        // Q6: Infrared reception
+        if (ir_uart_read_ready_p())
+        {
+           char ch;
+
+           ch = ir_uart_getc();
+
+           // Process the received byte.
+            
+        }
+
         pacer_wait ();
         tinygl_update ();
         navswitch_update ();
@@ -48,9 +59,11 @@ int main (void)
 
         /* TODO: Transmit the character over IR on a NAVSWITCH_PUSH
            event.  */
+        if (navswitch_push_event_p (NAVSWITCH_PUSH)) {
+            ir_uart_putc(character);
+        }
         
         display_character (character);
-        
     }
 
     return 0;
